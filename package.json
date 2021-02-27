@@ -6,6 +6,7 @@
 	"author": "<atharva.bhange@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
+		"cross-env": "^7.0.3",
 		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
 		"mongoose": "^5.11.18",
@@ -21,8 +22,8 @@
 		"nodemon": "^2.0.7"
 	},
 	"scripts": {
-		"start": "SET NODE_PATH=./build&& SET NODE_ENV=production&& npm run build && node build/server.js",
+		"start": "cross-env NODE_PATH=./build NODE_ENV=production npm run build && node build/server.js",
 		"build": "tsc",
-		"dev": "SET NODE_PATH=./build&& concurrently \"tsc -w\" \"nodemon build/server.js\""
+		"dev": "cross-env NODE_PATH=./build concurrently \"tsc -w\" \"nodemon build/server.js\""
 	}
 }
