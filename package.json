@@ -22,8 +22,11 @@
 		"nodemon": "^2.0.7"
 	},
 	"scripts": {
-		"start": "cross-env NODE_PATH=./build NODE_ENV=production npm run build && node build/server.js",
-		"build": "tsc",
+		"start": "cross-env NODE_PATH=./build NODE_ENV=production node build/server.js",
+		"build": "npm i && tsc",
 		"dev": "cross-env NODE_PATH=./build concurrently \"tsc -w\" \"nodemon build/server.js\""
+	},
+	"engines": {
+		"node": "14.x"
 	}
 }
