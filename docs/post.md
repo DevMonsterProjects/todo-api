@@ -25,6 +25,7 @@ Content Example
     message: "Todo Created",
     data: {
         todo: {
+            id : "some id",
             title : "Some Title",
             isCompleted : false
         },

@@ -17,6 +17,7 @@ Content Example
     message : "Todos is deleted",
     data : {
         todo : {
+            id : "some id",
             title : "Some title",
             isComplete : false/true
         },
